@@ -1,5 +1,4 @@
-<html style="background: radial-gradient(ellipse at top, #003c6d, transparent),
-radial-gradient(ellipse at bottom, #000000, transparent);
+<html style="background-color: rgb(0, 0, 0);
 
 height: 100%;">
   <head style="">
@@ -12,351 +11,146 @@ height: 100%;">
 
       * {
         font-family: "Noto Sans Thai";
+        color: #fff;
       }
 
-      
-    </style>
-    <style>
-      /* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */
-      *,
-      ::after,
-      ::before {
-        box-sizing: border-box;
-        border-width: 0;
-        border-style: solid;
-        border-color: #e5e7eb;
+      ::-webkit-scrollbar-track {
+        background: rgb(0, 0, 0);
       }
-      ::after,
-      ::before {
-        --tw-content: "";
+
+      ::-webkit-scrollbar {
+        width: 5px;
       }
-      html {
-        line-height: 1.5;
-        -webkit-text-size-adjust: 100%;
-        -moz-tab-size: 4;
-        tab-size: 4;
-        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-          "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-          "Noto Color Emoji";
-        font-feature-settings: normal;
-        font-variation-settings: normal;
+
+      ::-webkit-scrollbar-thumb {
+        background: #5e5e5e;
+        border-radius: 10px;
       }
-      body {
-        margin: 0;
-        line-height: inherit;
+
+      .font2{
+        font-family: "Luckiest Guy";
       }
-      hr {
-        height: 0;
-        color: inherit;
-        border-top-width: 1px;
+
+      .socialbutton{
+        transition: all 0.2s;
+        margin: 10px;
       }
-      abbr:where([title]) {
-        -webkit-text-decoration: underline dotted;
-        text-decoration: underline dotted;
+
+      .socialbutton:hover{
+        background-color: #ffffff;
+        color: black;
+        font-weight: 900;
+        box-shadow: rgb(255, 255, 255) 0px 0px 40px !important;
       }
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-size: inherit;
-        font-weight: inherit;
+
+      .socialbutton:hover img{
+        box-shadow: black 0px 0px 5px;
       }
-      a {
-        color: inherit;
-        text-decoration: inherit;
-      }
-      b,
-      strong {
-        font-weight: bolder;
-      }
-      code,
-      kbd,
-      pre,
-      samp {
-        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-          "Liberation Mono", "Courier New", monospace;
-        font-size: 1em;
-      }
-      small {
-        font-size: 80%;
-      }
-      sub,
-      sup {
-        font-size: 75%;
-        line-height: 0;
-        position: relative;
-        vertical-align: baseline;
-      }
-      sub {
-        bottom: -0.25em;
-      }
-      sup {
-        top: -0.5em;
-      }
-      table {
-        text-indent: 0;
-        border-color: inherit;
-        border-collapse: collapse;
-      }
-      button,
-      input,
-      optgroup,
-      select,
-      textarea {
-        font-family: inherit;
-        font-feature-settings: inherit;
-        font-variation-settings: inherit;
-        font-size: 100%;
-        font-weight: inherit;
-        line-height: inherit;
-        color: inherit;
-        margin: 0;
-        padding: 0;
-      }
-      button,
-      select {
-        text-transform: none;
-      }
-      [type="button"],
-      [type="reset"],
-      [type="submit"],
-      button {
-        -webkit-appearance: button;
-        background-color: transparent;
-        background-image: none;
-      }
-      :-moz-focusring {
-        outline: auto;
-      }
-      :-moz-ui-invalid {
-        box-shadow: none;
-      }
-      progress {
-        vertical-align: baseline;
-      }
-      ::-webkit-inner-spin-button,
-      ::-webkit-outer-spin-button {
-        height: auto;
-      }
-      [type="search"] {
-        -webkit-appearance: textfield;
-        outline-offset: -2px;
-      }
-      ::-webkit-search-decoration {
-        -webkit-appearance: none;
-      }
-      ::-webkit-file-upload-button {
-        -webkit-appearance: button;
-        font: inherit;
-      }
-      summary {
-        display: list-item;
-      }
-      blockquote,
-      dd,
-      dl,
-      figure,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      hr,
-      p,
-      pre {
-        margin: 0;
-      }
-      fieldset {
-        margin: 0;
-        padding: 0;
-      }
-      legend {
-        padding: 0;
-      }
-      menu,
-      ol,
-      ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-      dialog {
-        padding: 0;
-      }
-      textarea {
-        resize: vertical;
-      }
-      input::placeholder,
-      textarea::placeholder {
-        opacity: 1;
-        color: #9ca3af;
-      }
-      [role="button"],
-      button {
-        cursor: pointer;
-      }
-      :disabled {
-        cursor: default;
-      }
-      audio,
-      canvas,
-      embed,
-      iframe,
-      img,
-      object,
-      svg,
-      video {
-        display: block;
-        vertical-align: middle;
-      }
-      img,
-      video {
-        max-width: 100%;
-        height: auto;
-      }
-      [hidden] {
-        display: none;
-      }
-      *,
-      ::before,
-      ::after {
-        --tw-border-spacing-x: 0;
-        --tw-border-spacing-y: 0;
-        --tw-translate-x: 0;
-        --tw-translate-y: 0;
-        --tw-rotate: 0;
-        --tw-skew-x: 0;
-        --tw-skew-y: 0;
-        --tw-scale-x: 1;
-        --tw-scale-y: 1;
-        --tw-pan-x: ;
-        --tw-pan-y: ;
-        --tw-pinch-zoom: ;
-        --tw-scroll-snap-strictness: proximity;
-        --tw-gradient-from-position: ;
-        --tw-gradient-via-position: ;
-        --tw-gradient-to-position: ;
-        --tw-ordinal: ;
-        --tw-slashed-zero: ;
-        --tw-numeric-figure: ;
-        --tw-numeric-spacing: ;
-        --tw-numeric-fraction: ;
-        --tw-ring-inset: ;
-        --tw-ring-offset-width: 0px;
-        --tw-ring-offset-color: #fff;
-        --tw-ring-color: rgb(59 130 246 / 0.5);
-        --tw-ring-offset-shadow: 0 0 #0000;
-        --tw-ring-shadow: 0 0 #0000;
-        --tw-shadow: 0 0 #0000;
-        --tw-shadow-colored: 0 0 #0000;
-        --tw-blur: ;
-        --tw-brightness: ;
-        --tw-contrast: ;
-        --tw-grayscale: ;
-        --tw-hue-rotate: ;
-        --tw-invert: ;
-        --tw-saturate: ;
-        --tw-sepia: ;
-        --tw-drop-shadow: ;
-        --tw-backdrop-blur: ;
-        --tw-backdrop-brightness: ;
-        --tw-backdrop-contrast: ;
-        --tw-backdrop-grayscale: ;
-        --tw-backdrop-hue-rotate: ;
-        --tw-backdrop-invert: ;
-        --tw-backdrop-opacity: ;
-        --tw-backdrop-saturate: ;
-        --tw-backdrop-sepia: ;
-      }
-      ::backdrop {
-        --tw-border-spacing-x: 0;
-        --tw-border-spacing-y: 0;
-        --tw-translate-x: 0;
-        --tw-translate-y: 0;
-        --tw-rotate: 0;
-        --tw-skew-x: 0;
-        --tw-skew-y: 0;
-        --tw-scale-x: 1;
-        --tw-scale-y: 1;
-        --tw-pan-x: ;
-        --tw-pan-y: ;
-        --tw-pinch-zoom: ;
-        --tw-scroll-snap-strictness: proximity;
-        --tw-gradient-from-position: ;
-        --tw-gradient-via-position: ;
-        --tw-gradient-to-position: ;
-        --tw-ordinal: ;
-        --tw-slashed-zero: ;
-        --tw-numeric-figure: ;
-        --tw-numeric-spacing: ;
-        --tw-numeric-fraction: ;
-        --tw-ring-inset: ;
-        --tw-ring-offset-width: 0px;
-        --tw-ring-offset-color: #fff;
-        --tw-ring-color: rgb(59 130 246 / 0.5);
-        --tw-ring-offset-shadow: 0 0 #0000;
-        --tw-ring-shadow: 0 0 #0000;
-        --tw-shadow: 0 0 #0000;
-        --tw-shadow-colored: 0 0 #0000;
-        --tw-blur: ;
-        --tw-brightness: ;
-        --tw-contrast: ;
-        --tw-grayscale: ;
-        --tw-hue-rotate: ;
-        --tw-invert: ;
-        --tw-saturate: ;
-        --tw-sepia: ;
-        --tw-drop-shadow: ;
-        --tw-backdrop-blur: ;
-        --tw-backdrop-brightness: ;
-        --tw-backdrop-contrast: ;
-        --tw-backdrop-grayscale: ;
-        --tw-backdrop-hue-rotate: ;
-        --tw-backdrop-invert: ;
-        --tw-backdrop-opacity: ;
-        --tw-backdrop-saturate: ;
-        --tw-backdrop-sepia: ;
-      }
-      .flex {
-        display: flex;
-      }
-      .justify-center {
-        justify-content: center;
-      }
-      .text-3xl {
-        font-size: 1.875rem;
-        line-height: 2.25rem;
-      }
-      .font-bold {
-        font-weight: 700;
-      }
-      .underline {
-        -webkit-text-decoration-line: underline;
-        text-decoration-line: underline;
-      }
-      @media (min-width: 640px) {
-        .sm\:inline-flex {
-          display: inline-flex;
-        }
-      }
-      @media (min-width: 768px) {
-        .md\:block {
-          display: block;
-        }
+
+      .socialbutton img{
+        height: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
       }
     </style>
 
-    <div class="flex justify-center text-6xl font-black mt-2" style="font-family: 'Luckiest Guy';
-    box-shadow: #fff 0px 5px 10px;">
+    <script>
+      var TranHead = false
+      Masterhead = document.getElementById("TopText")
+      function ScrollEv() {
+        toppo = document.documentElement.scrollTop
+        console.log(toppo)
+        if (toppo == 0 && TranHead == false) {
+            TranHead = true
+            Masterhead.style = `
+            font-family: 'Luckiest Guy';
+            box-shadow: #00000052 0px 5px 10px;
+            backdrop-filter: none;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: none;
+            color: gold;`
+        } else {
+            if (toppo > 0 && TranHead == true) {
+                TranHead = false
+                Masterhead.style = `font-family: 'Luckiest Guy';
+                box-shadow: #00000052 0px 5px 10px;
+                backdrop-filter: blur(20px);
+                position: fixed;
+                top: 0;
+                width: 100%;
+                background-color: #000000a1;
+                color: gold;`
+            }
+        }
+      }
+      ScrollEv()
+      window.addEventListener("scroll", ScrollEv, { passive: true })
+    </script>
+
+    <div id="TopText" class="flex justify-center text-6xl font-black pt-2 pb-2" style="font-family: 'Luckiest Guy';
+    box-shadow: #00000052 0px 5px 10px;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000000a1;
+    color: gold;">
       Portfolio
     </div>
   </head>
 
   <body style="">
-    <div class="flex justify-center text-3xl pt-10">social media</div>
+    <img style="position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    filter: blur(10px);"
+    src="https://64.media.tumblr.com/e8e01f767671978ca400a938b7db6ec0/tumblr_pn4ih2uW0R1uzwgsuo1_400.gif"></img>
+
+    <div style="height: 100px;"></div>
+    
+    <div class="flex text-4xl font2 pl-10 w-full border-b border-dashed" 
+    style="border-color: gold;">social media</div>
+
+    <div class="flex flex-row mt-5 justify-center flex-wrap" style="width: 100%;">
+      <a href="https://www.youtube.com/channel/UCJ2C0UTfxQo6iGTfudPfoRQ" target="_blank" class="font-extralight text-lg p-2 rounded-full flex flex-row justify-center items-center socialbutton" style="height: 70px; box-shadow: red 0px 0px 6px;">
+        <img class="rounded-full mr-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png">
+        Yoututbe : AzPepoze
+      </a>
+
+      <a href="https://www.facebook.com/profile.php?id=100009337348196" target="_blank" class="font-extralight text-lg p-2 rounded-full flex flex-row justify-center items-center socialbutton" style="height: 70px; box-shadow: rgb(0, 132, 255) 0px 0px 6px;">
+        <img class="rounded-full mr-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png">
+        Facebook : จักรภัทร แก้วทอง (AzPepoze)
+      </a>
+
+      <a href="https://www.pixiv.net/en/users/44970537" target="_blank" class="font-extralight text-lg p-2 rounded-full flex flex-row justify-center items-center socialbutton" style="height: 70px; box-shadow: rgb(0, 132, 255) 0px 0px 6px;">
+        <img class="rounded-full mr-2" src="https://is5-ssl.mzstatic.com/image/thumb/Purple116/v4/65/cc/d2/65ccd259-6ed6-4e34-20f0-d83018f6663a/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg">
+        Pixiv : AzPepoze
+      </a>
+    </div>
+
+
+    <div class="flex justify-center text-9xl pt-10">TEST</div>
+    <div class="flex justify-center text-9xl pt-10">TEST</div>
+    <div class="flex justify-center text-9xl pt-10">TEST</div>
+    <div class="flex justify-center text-9xl pt-10">TEST</div>
+    <div class="flex justify-center text-9xl pt-10">TEST</div>
+    <div class="flex justify-center text-9xl pt-10">TEST</div>
+    <div class="flex justify-center text-9xl pt-10">TEST</div>
+    <div class="flex justify-center text-9xl pt-10">TEST</div>
+    <div class="flex justify-center text-9xl pt-10">TEST</div>
+    <div class="flex justify-center text-9xl pt-10">TEST</div>
+    <div class="flex justify-center text-9xl pt-10">TEST</div>
+    <div class="flex justify-center text-9xl pt-10">TEST</div>
+    <div class="flex justify-center text-9xl pt-10">TEST</div>
+    <div class="flex justify-center text-9xl pt-10">TEST</div>
+    <div class="flex justify-center text-9xl pt-10">TEST</div>
+    <div class="flex justify-center text-9xl pt-10">TEST</div>
+    <div class="flex justify-center text-9xl pt-10">TEST</div>
+
+
   </body>
 </html>
