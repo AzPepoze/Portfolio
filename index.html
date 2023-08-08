@@ -1,5 +1,7 @@
 <html style="background-color: rgb(0, 0, 0);
+overflow-x: hidden;
 
+width: 100%;
 height: 100%;">
   <head style="">
     <meta charset="UTF-8" />
@@ -62,7 +64,7 @@ height: 100%;">
         transition: all 0.5s;
       }
 
-      .work{height: auto;width: 30%;aspect-ratio: 1;min-width: 300px;padding: 1%;border: solid 1px white;border-radius: 20px;background: black;display: flex;flex-direction: column;align-items: center;padding-top: 4px;justify-content: flex-start;}
+      .work{height: fit-content;width: 30%;min-width: 300px;padding: 1%;border: solid 1px white;border-radius: 20px;background: black;display: flex;flex-direction: column;align-items: center;padding-top: 4px;justify-content: flex-start;}
       
       .work img{
           border-radius: 10px;
@@ -75,23 +77,23 @@ height: 100%;">
 
       .work .title{
         font-family: 'Luckiest Guy';
-        font-size: 3vmax;
+        font-size: 3rem;
         z-index: 1;
       }
 
       .WorkDes{
         width: 100%;
-        font-size: 1.5vmax;
+        font-size: 1.2rem;
         z-index: 1;
       }
 
       .seemore{
         transition: all 0.2s;
-        border: white solid 1px;
+        border: #ffffff59 solid 1px;
         width: 100%;
         border-radius: 1vh;
         margin-top: 10px;
-        background: black;
+        background: #1a1a1a;
       }
 
       .seemore:hover{
@@ -131,20 +133,43 @@ height: 100%;">
         transition: all 0.2s;
         position: relative;
         z-index: 0;
-        font-size: 1.5vmax;
+        font-size: 1.125rem;
       }
+
+      #LeftMain span {
+        transition: all 0.2s;
+      }
+
+      #LeftMain span:hover{
+        color: black !important;
+        -webkit-text-stroke: 1px white !important;
+        transform: translatex(20px) perspective(200px) rotateX(0deg) rotateY(30deg);
+        perspective-origin: right;
+      }
+
+      #RightMain span{
+        transition: all 0.2s;
+      }
+
+      #RightMain span:hover{
+        filter: drop-shadow(white 0px 0px 20px);
+        transform: scale(1.2) translatey(-10px);
+      }
+
     </style>
 
-    <div id="TopText" class="flex text-6xl font-black pt-2 pb-2" style="font-family: 'Luckiest Guy';
+    <div id="TopText" class="flex text-4xl font-black pt-2 pb-2" style="font-family: 'Luckiest Guy';
     box-shadow: #00000052 0px 5px 10px;
     backdrop-filter: blur(20px);
     position: fixed;
     top: 0;
     width: 100%;
     background-color: #000000a1;
-    color: rgb(255, 255, 255);
-    z-index: 100;">
-      Portfolio
+    color: gold;
+    z-index: 100;
+    text-align: center;
+    justify-content: center;">
+      Jakkapat Kaewthong
     </div>
 
     <!-- <div id="Mouse" style="
@@ -155,91 +180,164 @@ height: 100%;">
     z-index: 101;">
     </div> -->
 
-    <script>
+    <script defer>
+      window.addEventListener("load", () => {
         var TranHead = false
         Masterhead = document.getElementById("TopText")
+        BG = document.getElementById("BG") 
+
+        LeftMain = document.getElementById("LeftMain")
+        RightMain = document.getElementById("RightMain")
+
         function ScrollEv() {
           toppo = document.body.scrollTop
+
+          BG.style.filter = `hue-rotate(${toppo/20}deg)`
+
+          LeftMain.style.transform = `translatex(-${toppo}px) scale(${ 1 + (toppo/1000) })`
+          LeftMain.style.filter = `invert(${toppo/1000})`
+          RightMain.style.transform = `translatex(${toppo}px) scale(${ 1 + (toppo/1000) })`
+          RightMain.style.filter = `invert(${toppo/1000})`
+
           console.log(toppo)
           if (toppo == 0 && TranHead == false) {
               TranHead = true
-              Masterhead.style = `
-              transition: all 1;
-              font-family: 'Luckiest Guy';
-              backdrop-filter: blur(0px);
-              position: fixed;
-              top: 0;
-              width: 100%;
-              background-color: transparent;
-              box-shadow: transparent 0px 5px 10px;
-              color:gold;
-              justify-content:center;
-              z-index: 100;`
+              Masterhead.style.backdropFilter = "blur(0px)"
+              Masterhead.style.background = "transparent"
+              Masterhead.style.boxShadow = "transparent 0px 5px 10px"
           } else {
               if (toppo > 0 && TranHead == true) {
                   TranHead = false
-                  Masterhead.style = `
-                  transition: all 1;
-                  font-family: 'Luckiest Guy';
-                  box-shadow: #00000052 0px 5px 10px;
-                  backdrop-filter: blur(20px);
-                  position: fixed;
-                  top: 0;
-                  width: 100%;
-                  background-color: #000000a1;
-                  color:gold;
-                  justify-content:center;
-                  z-index: 100;`
+                  Masterhead.style.backdropFilter = "blur(10px)"
+                  Masterhead.style.background = "#000000a1"
+                  Masterhead.style.boxShadow = "#00000052 0px 5px 10px"
               }
           }
         }
         ScrollEv()
         window.addEventListener("scroll", ScrollEv, { passive: true })
 
-        // var Mouse = document.getElementById("Mouse")
 
-        // window.addEventListener("mousemove", function (e) {
-        //   var MouseEffect = document.createElement('div');
-        //   MouseEffect.style = `
-        //   width: 10px;
-        //   height: 10px;
-        //   background: rgb(255,255,255,0.1);
-        //   position:fixed;
-        //   transition:all 0.5s;
-        //   opacity:0;
-        //   border-radius:5px;
-        //   transform:scale(1);`
 
-        //   MouseEffect.style.left = (e.clientX)+'px';
-        //   MouseEffect.style.top = (e.clientY)+'px';
 
-        //   setTimeout(() => {
-        //     MouseEffect.style.opacity = 1
-        //     MouseEffect.style.transition = "all 0.4s"
-        //   }, 10);
+        function Resize() {
+          console.log(window.innerWidth)
 
-        //   setTimeout(() => {
-        //     MouseEffect.style.opacity = 0
-        //     MouseEffect.style.transform = "scale(0)"
-        //   }, 400);
+          if (window.innerWidth >= 800) {
+            RightMain.style.fontSize = "3vw"
+            LeftMain.style.fontSize = "6vw"
+          } else {
+            RightMain.style.fontSize = "3vh"
+            LeftMain.style.fontSize = "6vh"
+          }
+        }
 
-        //   Mouse.append(MouseEffect)
+        Resize()
+        window.onresize = Resize
 
-        //   setTimeout(() => {
-        //     MouseEffect.remove()
-        //   }, 500);
-        // });
+
+        var Mouse = document.getElementById("Mouse")
+
+        window.addEventListener("mousemove", function (e) {
+          var MouseEffect = document.createElement('div');
+          MouseEffect.style = `
+          width: 10px;
+          height: 10px;
+          background: white;
+          position:fixed;
+          transition:all 0.5s;
+          opacity:0;
+          border-radius:3px;
+          transform:scale(2) rotate(0deg);
+          pointer-events: none;`
+
+          MouseEffect.style.left = (e.clientX)+'px';
+          MouseEffect.style.top = (e.clientY)+'px';
+
+          setTimeout(() => {
+            MouseEffect.style.opacity = 1
+            MouseEffect.style.transition = "all 0.2s"
+            MouseEffect.style.transform = `scale(1) rotate(360deg)`
+          }, 10);
+
+          setTimeout(() => {
+            MouseEffect.style.opacity = 0
+            MouseEffect.style.transform = "scale(0)"
+          }, 200);
+
+          Mouse.append(MouseEffect)
+
+          setTimeout(() => {
+            MouseEffect.remove()
+          }, 500);
+        });
+      });
+
+
+
+
+
     </script>
   </head>
 
-  <body style="">
-    <img style="position: fixed;
+  <body style="width: 100%; height: 100%;">
+    <div style="
+    background-color: #001725;
+    width: 100%;
+    height: 100%;
+    box-shadow: #00daff8a 0px 0px 1000px 10px;
+    overflow: hidden;"
+    class="flex flex-row flex-wrap justify-center items-center">
+      <div id="LeftMain" class="font-black text-8xl flex w-1/2 h-1/2 justify-center items-center flex-col"
+      style="min-width: 400px;">
+        <span class="font2" style="letter-spacing:10px;">Hello!</span>
+        <span class="font2" style="letter-spacing:8px; color:transparent; -webkit-text-stroke: 1px white;">Hello!</span>
+        <span class="font2" style="letter-spacing:6px; color:transparent; -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);">Hello!</span>
+        <span class="font2" style="letter-spacing:4px; color:transparent; -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);">Hello!</span>
+        <span class="font2" style="letter-spacing:2px; color:transparent; -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);">Hello!</span>
+        <span class="font2" style="color:transparent; -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);">Hello!</span>
+      </div>
+
+      <div id="RightMain" class="font-black flex w-1/2 h-1/2 font2 justify-center items-center flex-col"
+      style="min-width: 400px;
+      font-size: 3dvw;">
+        <span span class="font2" style="letter-spacing:3px;">{ My name is }</span>
+        <span span class="font2" style="letter-spacing:3px;">Jakkapat Kaewthong</span>
+        <span span style="letter-spacing:3px; font-weight: 900;">[ จักรภัทร แก้วทอง ]</span>
+        <span class="font2" style="color:transparent; -webkit-text-stroke: 1px white;">{ Skill }</span>
+        <span class="font2" style="color:transparent; -webkit-text-stroke: 1px white;">Coding : Lua : HTML : css : js</span>
+        <span class="font2" style="color:transparent; -webkit-text-stroke: 1px white;">Drawing</span>
+        <span class="font2" style="color:transparent; -webkit-text-stroke: 1px white;">Write song / Remix song</span>
+        <span class="font2" style="color:transparent; -webkit-text-stroke: 1px white;">Modeling 3D</span>
+      </div>
+    </div>
+
+
+
+
+
+
+    <img id="BG" style="
+    position: fixed;
     z-index: -1;
+    top: 0;
     width: 100%;
     height: 100%;
     opacity: 0.3;
-    filter: blur(10px);"
-    src="https://64.media.tumblr.com/e8e01f767671978ca400a938b7db6ec0/tumblr_pn4ih2uW0R1uzwgsuo1_400.gif"></img>
+    object-fit: cover;"
+    src="https://i.imgur.com/Nglfni6.png"></img>
+
+
+
+
+
+    <div id="Mouse" style="
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;"></div>
 
 
 
@@ -247,7 +345,7 @@ height: 100%;">
     <div style="height: 100px;"></div>
       
     <div class="flex text-4xl font2 pl-10 w-full border-b border-dashed" 
-    style="border-color: gold;">Work Projects</div>
+    style="border-color: gold; letter-spacing:10px;">Work Projects</div>
 
     <div class="flex flex-row mt-5 justify-center flex-wrap" style="width: 100%;">
       <div class="work">
@@ -258,7 +356,7 @@ height: 100%;">
           <br>Developer : Me
           <br>Status : In developing, Not public
         </div>
-        <button class="seemore"><span>See more</span></button>
+        <button class="seemore"><span>Expand</span></button>
       </div>
     </div>
 
@@ -276,7 +374,7 @@ height: 100%;">
     <div style="height: 100px;"></div>
     
     <div class="flex text-4xl font2 pl-10 w-full border-b border-dashed" 
-    style="border-color: gold;">social media</div>
+    style="border-color: gold; letter-spacing:10px;">social media</div>
 
 
     <div class="flex flex-row mt-5 justify-center flex-wrap" style="width: 100%;">
@@ -313,7 +411,7 @@ height: 100%;">
     <div style="height: 100px;"></div>
       
     <div class="flex text-4xl font2 pl-10 w-full border-b border-dashed" 
-    style="border-color: gold;">Created Community</div>
+    style="border-color: gold; letter-spacing:10px;">Created Community</div>
 
     <div class="flex flex-row mt-5 justify-center flex-wrap" style="width: 100%;">
       <a href="https://discord.gg/eHuhzKbr7C" target="_blank" class="font-extralight text-lg p-2 rounded-full flex flex-row justify-center items-center socialbutton" style="height: 70px; box-shadow: rgb(106, 171, 255) 0px 0px 6px;">
