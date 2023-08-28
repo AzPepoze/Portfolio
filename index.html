@@ -74,7 +74,6 @@ height: 100%;">
           height: 50%;
           width: 100%;
           object-fit: cover;
-          margin-bottom: 10px;
       }
 
       .work .title{
@@ -87,6 +86,7 @@ height: 100%;">
         width: 100%;
         font-size: 1.2rem;
         z-index: 1;
+        margin-top: 10px;
       }
 
       .seemore{
@@ -158,6 +158,24 @@ height: 100%;">
         transform: scale(1.2) translatey(-10px);
       }
 
+      iframe{
+        border-radius: 20px;
+        box-shadow: white 0px 0px 10px;
+      }
+
+      @keyframes Loading {
+        from {filter: hue-rotate(0deg);transform: rotate(0deg);}
+        to {filter: hue-rotate(360deg);transform: rotate(360deg);}
+      }
+
+      body {
+        scroll-snap-type: y mandatory;
+      }
+
+      body div{
+        scroll-snap-align: center;
+      }
+
     </style>
 
     <div id="TopText" class="flex text-4xl font-black pt-2 pb-2" style="font-family: 'Luckiest Guy';
@@ -184,6 +202,18 @@ height: 100%;">
 
     <script defer>
       window.addEventListener("load", () => {
+        var Loadscreen =  document.getElementById("loadscreen")
+        Loadscreen.style.opacity = 0
+        Loadscreen.style.filter = "blur(100px)"
+        Loadscreen.style.pointerEvents = "none"
+        document.getElementById("mainbody").style.overflow = "visible"
+        requestAnimationFrame(function() {
+          window.scrollTo(0, 0);
+        })
+        setTimeout(() => {
+          Loadscreen.remove()
+        }, 3000);
+
         var TranHead = false
         Masterhead = document.getElementById("TopText")
         BG = document.getElementById("BG") 
@@ -196,10 +226,8 @@ height: 100%;">
 
           BG.style.filter = `hue-rotate(${toppo/20}deg)`
 
-          LeftMain.style.transform = `translatex(-${toppo}px) scale(${ 1 + (toppo/1000) })`
-          LeftMain.style.filter = `invert(${toppo/1000})`
-          RightMain.style.transform = `translatex(${toppo}px) scale(${ 1 + (toppo/1000) })`
-          RightMain.style.filter = `invert(${toppo/1000})`
+          LeftMain.style.transform = `translatex(-${toppo}px)`
+          RightMain.style.transform = `translatex(${toppo}px)`
 
           console.log(toppo)
           if (toppo == 0 && TranHead == false) {
@@ -228,9 +256,11 @@ height: 100%;">
           if (window.innerWidth >= 800) {
             RightMain.style.fontSize = "3vw"
             LeftMain.style.fontSize = "6vw"
+            LeftMain.style.paddingTop = "none"
           } else {
             RightMain.style.fontSize = "3vh"
             LeftMain.style.fontSize = "6vh"
+            LeftMain.style.paddingTop = "50px"
           }
         }
 
@@ -282,9 +312,35 @@ height: 100%;">
     </script>
   </head>
 
-  <body style="width: 100%; height: 100%;">
+  <body style="width: 100%; height: 100%; overflow: hidden;" id="mainbody">
+
+    <!-- loading -->
+
+    <div id="loadscreen" style="background-color: black;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 3s;">
+      <img id="loadicon" src="img/loading.png"
+      style="width: 10%;
+      animation: Loading 1s infinite;
+      animation-timing-function:cubic-bezier(1, 0.82, 0.165, 0);">
+    </div>
+
+    <!-- loading -->
+
+    <div style="background-image: url('https://i.gifer.com/1ynM.gif');
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    filter: blur(30px);"></div>
+
     <div style="
-    background-color: #001725;
     width: 100%;
     height: 100%;
     box-shadow: #00daff8a 0px 0px 1000px 10px;
@@ -306,7 +362,7 @@ height: 100%;">
         <span span class="font2" style="letter-spacing:3px;">{ My name is }</span>
         <span span class="font2" style="letter-spacing:3px;">Jakkapat Kaewthong</span>
         <span span style="letter-spacing:3px; font-weight: 900;">[ จักรภัทร แก้วทอง ]</span>
-        <span class="font2" style="color:transparent; -webkit-text-stroke: 1px white;">{ Skill }</span>
+        <span class="font2" style="color:transparent; -webkit-text-stroke: 1px white;">{ Skills }</span>
         <span class="font2" style="color:transparent; -webkit-text-stroke: 1px white;">Coding : Lua : HTML : css : js</span>
         <span class="font2" style="color:transparent; -webkit-text-stroke: 1px white;">Drawing</span>
         <span class="font2" style="color:transparent; -webkit-text-stroke: 1px white;">Write song / Remix song</span>
@@ -343,38 +399,8 @@ height: 100%;">
 
 
 
-
     <div style="height: 100px;"></div>
-      
-    <div class="flex text-4xl font2 pl-10 w-full border-b border-dashed" 
-    style="border-color: gold; letter-spacing:10px;">Work Projects</div>
-
-    <div class="flex flex-row mt-5 justify-center flex-wrap" style="width: 100%;">
-      <div class="work">
-        <div class="title">Perthro</div>
-        <img src="https://i.ibb.co/B2X8y8j/Launch1.jpg" style="box-shadow: green 0px 0px 50px;">
-        <div class="WorkDes">Perthro is a roblox game
-          <br>Genre : Open World RPG
-          <br>Developer : Me
-          <br>Status : In developing, Not public
-        </div>
-        <button class="seemore"><span>Expand</span></button>
-      </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-    <div style="height: 100px;"></div>
-    
+        
     <div class="flex text-4xl font2 pl-10 w-full border-b border-dashed" 
     style="border-color: gold; letter-spacing:10px;">social media</div>
 
@@ -404,12 +430,6 @@ height: 100%;">
 
 
 
-
-
-
-
-
-
     <div style="height: 100px;"></div>
       
     <div class="flex text-4xl font2 pl-10 w-full border-b border-dashed" 
@@ -422,7 +442,7 @@ height: 100%;">
       </a>
       
       <a href="https://discord.gg/BgxvVqap4G" target="_blank" class="font-extralight text-lg p-2 rounded-full flex flex-row justify-center items-center socialbutton" style="height: 70px; box-shadow: rgb(255, 255, 255) 0px 0px 6px;">
-        <img class="rounded-full mr-2" src="https://cdn.discordapp.com/icons/999312366518939728/42e2df0581e8090d824b2d3bf8f28a21.webp?size=96">
+        <img class="rounded-full mr-2" src="https://cdn.discordapp.com/icons/999312366518939728/d4413c38bdbd1fc6808e6ad631fed53a.webp?size=96">
         Discord : Newtube
       </a>
     </div>
@@ -433,24 +453,60 @@ height: 100%;">
 
 
 
-    <div class="flex justify-center text-9xl pt-10">TEST</div>
-    <div class="flex justify-center text-9xl pt-10">TEST</div>
-    <div class="flex justify-center text-9xl pt-10">TEST</div>
-    <div class="flex justify-center text-9xl pt-10">TEST</div>
-    <div class="flex justify-center text-9xl pt-10">TEST</div>
-    <div class="flex justify-center text-9xl pt-10">TEST</div>
-    <div class="flex justify-center text-9xl pt-10">TEST</div>
-    <div class="flex justify-center text-9xl pt-10">TEST</div>
-    <div class="flex justify-center text-9xl pt-10">TEST</div>
-    <div class="flex justify-center text-9xl pt-10">TEST</div>
-    <div class="flex justify-center text-9xl pt-10">TEST</div>
-    <div class="flex justify-center text-9xl pt-10">TEST</div>
-    <div class="flex justify-center text-9xl pt-10">TEST</div>
-    <div class="flex justify-center text-9xl pt-10">TEST</div>
-    <div class="flex justify-center text-9xl pt-10">TEST</div>
-    <div class="flex justify-center text-9xl pt-10">TEST</div>
-    <div class="flex justify-center text-9xl pt-10">TEST</div>
+    <div style="height: 100px;"></div>
+      
+    <div class="flex text-4xl font2 pl-10 w-full border-b border-dashed" 
+    style="border-color: gold; letter-spacing:10px;">Work Projects</div>
 
+    <div class="flex flex-row mt-5 justify-center flex-wrap" style="width: 100%; grid-gap: 50px;">
+
+
+      <div class="work">
+        <div class="title">Perthro</div>
+        <img src="https://i.ibb.co/B2X8y8j/Launch1.jpg" style="box-shadow: green 0px 0px 50px;">
+        <div class="WorkDes">Perthro is a roblox game
+          <br>Genre : Open World RPG
+          <br>Developer : Me
+          <br>Status : In developing, Not public
+        </div>
+        <button class="seemore"><span>Expand</span></button>
+      </div>
+
+      <div class="work">
+        <div class="title">Newtube</div>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Z3Hrpjsi9AY" title="Youtube style customizer (Newtube) (Preview)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="box-shadow: rgb(255, 255, 255) 0px 0px 50px;"></iframe>
+        <div class="WorkDes">Newtube is browser extention
+          <br>Available : Chromium based, Firefox
+          <br>Developer : Me
+          <br>Status : Public
+        </div>
+        <button class="seemore"><span>Expand</span></button>
+      </div>
+
+
+    </div>
+
+
+
+
+
+    <div style="height: 100px;"></div>
+    
+    <div class="flex text-4xl font2 pl-10 w-full border-b border-dashed" 
+    style="border-color: gold; letter-spacing:10px;">Songs (Original/Remix)</div>
+
+    <div class="flex flex-row mt-5 justify-center flex-wrap" style="width: 100%;">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLr6Nl-A8PXhxYjSzJSAh20CJPxhuSua4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+
+
+
+
+
+
+
+    <div style="height: 100px;"></div>
 
   </body>
 </html>
