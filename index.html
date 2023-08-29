@@ -161,6 +161,9 @@ height: 100%;">
       iframe{
         border-radius: 20px;
         box-shadow: white 0px 0px 10px;
+        width: 100%;
+        aspect-ratio: 16/9;
+        height: auto;
       }
 
       @keyframes Loading {
@@ -333,12 +336,12 @@ height: 100%;">
 
     <!-- loading -->
 
-    <div style="background-image: url('https://i.gifer.com/1ynM.gif');
+    <video src="BG.mp4" autoplay loop style="
     width: 100%;
     height: 100%;
     position: absolute;
-    background-size: cover;
-    filter: blur(30px);"></div>
+    object-fit: cover;
+    filter: blur(30px);"></video>
 
     <div style="
     width: 100%;
@@ -496,7 +499,7 @@ height: 100%;">
     style="border-color: gold; letter-spacing:10px;">Songs (Original/Remix)</div>
 
     <div class="flex flex-row mt-5 justify-center flex-wrap" style="width: 100%;">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLr6Nl-A8PXhxYjSzJSAh20CJPxhuSua4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLr6Nl-A8PXhxYjSzJSAh20CJPxhuSua4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="max-width: 50%;"></iframe>
     </div>
 
 
