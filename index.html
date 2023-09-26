@@ -158,9 +158,7 @@ height: 100%;">
 
 
     .work {
-      height: 80%;
       width: 80%;
-      min-width: 300px;
       border: solid 1px white;
       border-radius: 20px;
       background: #0000006e;
@@ -169,6 +167,8 @@ height: 100%;">
       align-items: center;
       justify-content: flex-start;
       padding: 4%;
+      height: 80%;
+      overflow-y: scroll;
     }
 
     .work iframe {
@@ -176,7 +176,9 @@ height: 100%;">
       aspect-ratio: 16/9;
       width: auto;
       max-width: -webkit-fill-available;
+      max-width: -moz-available;
       height: -webkit-fill-available;
+      height: -moz-available;
     }
 
     .work .title {
@@ -191,6 +193,17 @@ height: 100%;">
       font-size: 1.2rem;
       z-index: 1;
       margin-top: 10px;
+    }
+
+    .WorkDes a {
+      color: aqua;
+      transition: all 0.5s;
+      text-decoration: none;
+      font-weight: 900;
+    }
+
+    .WorkDes a:hover {
+      color: rgb(255, 239, 210);
     }
 
 
@@ -215,8 +228,16 @@ height: 100%;">
       position: relative;
     }
 
+    .Page > * > * {
+      transition: all 1s;
+    }
+
+    .Page[hidden] > * > * {
+      opacity: 0;
+    }
+
     #Page3 {
-      padding-block: 5% !important;
+      padding-block: 5%;
     }
 
     * {
@@ -231,7 +252,7 @@ height: 100%;">
     .PageButton {
       width: 100%;
       text-align: center;
-      font-size: 2vmin;
+      font-size: 2.8vmin;
       transition: all 0.2s, opacity 0.5s;
       display: flex;
       justify-content: center;
@@ -290,6 +311,12 @@ height: 100%;">
     [underline] {
       text-decoration: underline;
     }
+
+    .WorkContainer {
+      height: -webkit-fill-available;
+      width: 100%;
+      display: contents;
+    }
   </style>
 
   <script defer>
@@ -321,11 +348,13 @@ height: 100%;">
         if (checkVisible(GetPage)) {
           GetButton.style.opacity = '1'
           GetButton.style.background = 'unset'
-          GetButton.setAttribute("Selected", "")
+          GetButton.setAttribute("selected", "")
+          GetPage.removeAttribute("hidden")
         } else {
           GetButton.style.opacity = '0.4'
           GetButton.style.background = 'black'
-          GetButton.removeAttribute("Selected")
+          GetButton.removeAttribute("selected")
+          GetPage.setAttribute("hidden", "")
         }
       }
 
@@ -443,6 +472,11 @@ height: 100%;">
           .LeftFrame,
           .RightFrame{
             height: 50% !important;
+          }
+
+          #Page3 {
+            padding-block: 0px !important;
+            margin-bottom: 10%;
           }
           `
         }
@@ -661,15 +695,19 @@ height: 100%;">
       <div class="work" style="border-color: green;">
         <div class="title">Perthro</div>
 
-        <iframe
-          src="https://www.youtube.com/embed/videoseries?si=tuTqFvJaufMJfvyV&amp;list=PLr6Nl-A8PXhxhHBmEeVc64ns1Cpi8ygYc&autoplay=1&loop=1&mute=1"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-        <div class="WorkDes">Perthro is a roblox game
-          <br>Genre : Open World RPG
-          <br>Developer : Me
-          <br>Status : In developing, Not public
+        <div class="WorkContainer">
+
+          <iframe
+            src="https://www.youtube.com/embed/videoseries?si=tuTqFvJaufMJfvyV&amp;list=PLr6Nl-A8PXhxhHBmEeVc64ns1Cpi8ygYc&autoplay=1&loop=1&mute=1"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <div class="WorkDes">Perthro is a roblox game
+            <br>Genre : Open World RPG
+            <br>Developer : Me
+            <br>Status : In developing, Not public
+          </div>
+
         </div>
 
       </div>
@@ -683,18 +721,22 @@ height: 100%;">
       <div class="work" style="border-color: white;">
         <div class="title">Newtube</div>
 
-        <iframe
-          src="https://www.youtube.com/embed/Z3Hrpjsi9AY?rel=0&wmode=opaque&enablejsapi=1&autoplay=1&loop=1&mute=1"
-          title="Youtube style customizer (Newtube) (Preview)" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-        <div class="WorkDes">Newtube is browser extention
-          <br>Available : <a href="https://chrome.google.com/webstore/detail/dnjjchajjdnfbjhjclmilicgheglcopj"
-            target="_blank">Chrome Web Store</a>, <a
-            href="https://addons.mozilla.org/en-US/firefox/addon/newtube-youtubestylecustomizer/"
-            target="_blank">Firefox</a>
-          <br>Developer : Me
-          <br>Status : Public
+        <div class="WorkContainer">
+
+          <iframe
+            src="https://www.youtube.com/embed/Z3Hrpjsi9AY?rel=0&wmode=opaque&enablejsapi=1&autoplay=1&loop=1&mute=1"
+            title="Youtube style customizer (Newtube) (Preview)" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <div class="WorkDes">Newtube is browser extention
+            <br>Available : <a href="https://chrome.google.com/webstore/detail/dnjjchajjdnfbjhjclmilicgheglcopj"
+              target="_blank">Chrome Web Store</a>, <a
+              href="https://addons.mozilla.org/en-US/firefox/addon/newtube-youtubestylecustomizer/"
+              target="_blank">Firefox</a>
+            <br>Developer : Me
+            <br>Status : Public
+          </div>
+
         </div>
 
       </div>
@@ -718,8 +760,13 @@ height: 100%;">
   </div>
 
 
-  <div id="ButtonContainer"
-    style="bottom: 0px; width: 100%; height: 5%; position: fixed; display: flex; flex-direction: row; justify-content: space-between;">
+  <div id="ButtonContainer" style="bottom: 0px;
+    width: 100%;
+    height: 8%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;">
     <div id="PageButton0" class="PageButton">
       Home Page
     </div>
@@ -737,7 +784,7 @@ height: 100%;">
     </div>
 
     <div id="PageButton4" class="PageButton">
-      Songs (Original / Remix)
+      Songs<br>(Original / Remix)
     </div>
   </div>
 
