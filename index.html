@@ -1,184 +1,13 @@
-<html style="background-color: rgb(0, 0, 0);
-overflow-x: hidden;
-
+<html style="background-color: rgb(18 18 18);
+overflow: hidden;
 width: 100%;
 height: 100%;">
 
 <head>
-  <title>Jakkapat Kaewthong</title>
-  <link rel="icon" type="image/x-icon" href="https://i.ibb.co/dbXJq9k/2.png">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@200&display=swap");
     @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
-
-    * {
-      font-family: "Noto Sans Thai";
-      color: #fff;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: rgb(0, 0, 0);
-    }
-
-    ::-webkit-scrollbar {
-      width: 5px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: #5e5e5e;
-      border-radius: 10px;
-    }
-
-    ::selection {
-      background: rgb(255, 113, 113);
-    }
-
-    .font2 {
-      font-family: "Luckiest Guy";
-    }
-
-    .socialbutton {
-      transition: all 0.2s;
-      margin: 10px;
-      background: black;
-    }
-
-    .socialbutton:hover {
-      background-color: #ffffff;
-      color: black;
-      font-weight: 900;
-      box-shadow: rgb(255, 255, 255) 0px 0px 40px !important;
-      padding: 10px;
-      transform: scale(1.1);
-    }
-
-    .socialbutton:hover img {
-      box-shadow: black 0px 0px 5px;
-    }
-
-    .socialbutton img {
-      height: 100%;
-      aspect-ratio: 1;
-      object-fit: cover;
-      box-shadow: rgb(255, 255, 255) 0px 0px 5px;
-      transition: all 0.5s;
-    }
-
-    .work {
-      height: fit-content;
-      width: 30%;
-      min-width: 300px;
-      padding: 1%;
-      border: solid 1px white;
-      border-radius: 20px;
-      background: black;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 4px;
-      justify-content: flex-start;
-    }
-
-    .work img {
-      border-radius: 10px;
-      box-shadow: white 0px 0px 50px;
-      height: 50%;
-      width: 100%;
-      object-fit: cover;
-    }
-
-    .work .title {
-      font-family: 'Luckiest Guy';
-      font-size: 3rem;
-      z-index: 1;
-    }
-
-    .WorkDes {
-      width: 100%;
-      font-size: 1.2rem;
-      z-index: 1;
-      margin-top: 10px;
-    }
-
-    .seemore {
-      transition: all 0.2s;
-      border: #ffffff59 solid 1px;
-      width: 100%;
-      border-radius: 1vh;
-      margin-top: 10px;
-      background: #1a1a1a;
-    }
-
-    .seemore:hover {
-      background: rgb(255, 255, 255);
-    }
-
-    .seemore * {
-      color: white;
-    }
-
-    .seemore:hover * {
-      color: black;
-      font-weight: bolder;
-    }
-
-
-    .seemore span::after {
-      content: '»';
-      position: absolute;
-      opacity: 0;
-      top: 0;
-      right: 5px;
-      transition: all 0.2s;
-    }
-
-    .seemore:hover span::after {
-      opacity: 1;
-    }
-
-    .seemore:hover span {
-      padding-right: 25px;
-    }
-
-    .seemore span {
-      cursor: pointer;
-      display: inline-block;
-      transition: all 0.2s;
-      position: relative;
-      z-index: 0;
-      font-size: 1.125rem;
-    }
-
-    #LeftMain span {
-      transition: all 0.2s;
-    }
-
-    #LeftMain span:hover {
-      color: black !important;
-      -webkit-text-stroke: 1px white !important;
-      transform: translatex(20px) perspective(200px) rotateX(0deg) rotateY(30deg);
-      perspective-origin: right;
-    }
-
-    #RightMain span {
-      transition: all 0.2s;
-    }
-
-    #RightMain span:hover {
-      filter: drop-shadow(white 0px 0px 20px);
-      transform: scale(1.2) translatey(-10px);
-    }
-
-    iframe {
-      border-radius: 20px;
-      box-shadow: white 0px 0px 10px;
-      width: 100%;
-      aspect-ratio: 16/9;
-      height: auto;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 
     @keyframes LoadingHue {
       from {
@@ -215,41 +44,266 @@ height: 100%;">
       background-size: 1000px 100%;
     }
 
-    .WorkDes a {
-      color: aqua;
-      text-decoration: underline dotted;
+    body {
+      top: 0px !important;
+    }
+
+
+
+
+
+
+
+
+
+    .goog-te-combo {
+      border-radius: 10px;
+      background: black;
+      border: solid 1px;
+    }
+
+    #google_translate_element,
+    #google_translate_element * {
+      font-size: 2vmax;
+      color: white;
+      font-weight: 100;
+      font-family: 'Nunito', 'Noto Sans Thai' !important;
+    }
+
+    #google_translate_element select {
+      margin-bottom: 10%;
+    }
+
+    html.translated-ltr #TopText {
+      top: 40px !important;
+    }
+
+    .goog-te-gadget .goog-te-combo {
+      border-color: rgb(80, 80, 80);
+    }
+
+    iframe.skiptranslate {
+      display: none;
+    }
+
+
+
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #7ad5ff;
+      border-radius: 10px;
+      margin: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c4f6ff;
+    }
+
+
+
+
+    .socialbutton {
+      transition: all 0.2s;
+      margin: 1%;
+      background: black;
+      display: flex;
+      align-content: center;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 1%;
+      text-decoration: none;
+      width: 70%;
+      font-size: 1.7vmax;
+      height: 4vmax !important;
+    }
+
+    .rounded-full,
+    .socialbutton {
+      border-radius: 9999px;
+    }
+
+    .socialbutton:hover {
+      background-color: #ffffff;
+      color: black;
+      font-weight: 900;
+      box-shadow: rgb(255, 255, 255) 0px 0px 40px !important;
+      transform: scale(1.1);
+    }
+
+    .socialbutton:hover img {
+      box-shadow: black 0px 0px 5px;
+    }
+
+    .socialbutton img {
+      height: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      box-shadow: rgb(255, 255, 255) 0px 0px 5px;
+      transition: all 0.5s;
+      margin-right: 10px;
+    }
+
+
+
+
+
+    .work {
+      height: 80%;
+      width: 80%;
+      min-width: 300px;
+      border: solid 1px white;
+      border-radius: 20px;
+      background: #0000006e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 4%;
+    }
+
+    .work iframe {
+      border-radius: 20px;
+      aspect-ratio: 16/9;
+      width: auto;
+      max-width: -webkit-fill-available;
+      height: -webkit-fill-available;
+    }
+
+    .work .title {
+      font-family: 'Luckiest Guy';
+      font-size: 3rem;
+      z-index: 1;
+      margin-bottom: 2%;
+    }
+
+    .WorkDes {
+      width: 100%;
+      font-size: 1.2rem;
+      z-index: 1;
+      margin-top: 10px;
+    }
+
+
+
+
+
+
+    * {
+      font-family: 'Nunito', 'Noto Sans Thai';
+    }
+
+    .Page {
+      min-width: 100%;
+      scroll-snap-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding-block: 20vmin;
+      height: -webkit-fill-available;
+      height: -moz-available;
+      position: relative;
+    }
+
+    #Page3 {
+      padding-block: 5% !important;
+    }
+
+    * {
+      color: white;
+    }
+
+    *::selection {
+      color: black;
+      background-color: white;
+    }
+
+    .PageButton {
+      width: 100%;
+      text-align: center;
+      font-size: 2vmin;
+      transition: all 0.2s, opacity 0.5s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .PageButton:not([Selected]):hover {
+      color: black !important;
+      background: white !important;
+    }
+
+    .LeftFrame,
+    .RightFrame {
+      min-width: 50%;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .MainText {
+      font-size: 9vmax;
+      font-weight: 900;
+    }
+
+    .SubText {
+      font-size: 2vmax;
+    }
+
+    .StrokeText {
+      font-family: sans-serif;
+      letter-spacing: 10px;
+      color: transparent !important;
+      -webkit-text-stroke: 2px rgb(255, 255, 255);
+    }
+
+    .CenterText {
+      text-align: center;
+    }
+
+    [Large] {
+      font-size: 4vmax;
+    }
+
+    .MediumText {
+      font-size: 3vmax;
+    }
+
+    [bold] {
+      font-weight: 900;
+    }
+
+    [underline] {
+      text-decoration: underline;
     }
   </style>
 
-  <div id="TopText" class="flex text-4xl font-black pt-2 pb-2" style="font-family: 'Luckiest Guy';
-    box-shadow: #00000052 0px 5px 10px;
-    backdrop-filter: blur(20px);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #000000a1;
-    color: gold;
-    z-index: 100;
-    text-align: center;
-    justify-content: center;">
-    Jakkapat Kaewthong
-  </div>
-
-  <!-- <div id="Mouse" style="
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 101;">
-    </div> -->
-
   <script defer>
+
     window.addEventListener("load", () => {
+
+      function checkVisible(elm) {
+        var rect = elm.getBoundingClientRect();
+        var viewWidth = Math.max(document.documentElement.clientWidth, window.innerWidth);
+        return !(rect.left + viewWidth / 2 < 0 || rect.left - viewWidth / 2 >= 0);
+      }
+
       var Loadscreen = document.getElementById("loadscreen")
       Loadscreen.style.opacity = 0
       Loadscreen.style.filter = "blur(100px)"
       Loadscreen.style.pointerEvents = "none"
-      document.getElementById("mainbody").style.overflow = "visible"
       requestAnimationFrame(function () {
         window.scrollTo(0, 0);
       })
@@ -257,66 +311,51 @@ height: 100%;">
         Loadscreen.remove()
       }, 3000);
 
-      var TranHead = false
-      Masterhead = document.getElementById("TopText")
-      BG = document.getElementById("BG")
 
-      LeftMain = document.getElementById("LeftMain")
-      RightMain = document.getElementById("RightMain")
 
-      function ScrollEv() {
-        toppo = document.body.scrollTop
-
-        BG.style.filter = `hue-rotate(${toppo / 20}deg)`
-
-        LeftMain.style.transform = `translatex(-${toppo}px)`
-        RightMain.style.transform = `translatex(${toppo}px)`
-
-        console.log(toppo)
-        if (toppo == 0 && TranHead == false) {
-          TranHead = true
-          Masterhead.style.backdropFilter = "blur(0px)"
-          Masterhead.style.background = "transparent"
-          Masterhead.style.boxShadow = "transparent 0px 5px 10px"
+      function CheckPage(PageNumber) {
+        GetPage = document.getElementById("Page" + PageNumber)
+        GetButton = document.getElementById("PageButton" + PageNumber)
+        if (checkVisible(GetPage)) {
+          GetButton.style.opacity = '1'
+          GetButton.style.background = 'unset'
+          GetButton.setAttribute("Selected", "")
         } else {
-          if (toppo > 0 && TranHead == true) {
-            TranHead = false
-            Masterhead.style.backdropFilter = "blur(10px)"
-            Masterhead.style.background = "#000000a1"
-            Masterhead.style.boxShadow = "#00000052 0px 5px 10px"
-          }
-        }
-      }
-      ScrollEv()
-      window.addEventListener("scroll", ScrollEv, { passive: true })
-
-
-
-
-      function Resize() {
-        console.log(window.innerWidth)
-
-        if (window.innerWidth >= 800) {
-          RightMain.style.fontSize = "3vw"
-          LeftMain.style.fontSize = "6vw"
-          LeftMain.style.paddingTop = "unset"
-          Masterhead.style.fontSize = "xxx-large"
-        } else {
-          RightMain.style.fontSize = "3vh"
-          LeftMain.style.fontSize = "6vh"
-          LeftMain.style.paddingTop = "50px"
-          Masterhead.style.fontSize = "8vw"
+          GetButton.style.opacity = '0.4'
+          GetButton.style.background = 'black'
+          GetButton.removeAttribute("Selected")
         }
       }
 
-      Resize()
-      window.onresize = Resize
+
+      var container = document.body;
+      // where "container" is the id of the container
+      container.addEventListener("wheel", function (e) {
+        if (e.deltaY > 0) {
+          container.scrollTo({
+            top: 0,
+            left: container.scrollLeft + window.innerWidth,
+            behavior: "smooth",
+          });
+        }
+        else {
+          container.scrollTo({
+            top: 0,
+            left: container.scrollLeft - window.innerWidth,
+            behavior: "smooth",
+          });
+        }
+        e.preventDefault();
+      }, { passive: false });
+
+      container.addEventListener("scroll", OnScroll);
+
 
 
       var Mouse = document.getElementById("Mouse")
 
       window.addEventListener("mousemove", function (e) {
-        var MouseEffect = document.createElement('div');
+        var MouseEffect = document.createElement('div')
         MouseEffect.style = `
           width: 10px;
           height: 10px;
@@ -324,44 +363,160 @@ height: 100%;">
           position:fixed;
           transition:all 0.5s;
           opacity:0;
-          border-radius:3px;
+          border-radius:100%;
           transform:scale(2) rotate(0deg);
           pointer-events: none;`
 
-        MouseEffect.style.left = (e.clientX) + 'px';
-        MouseEffect.style.top = (e.clientY) + 'px';
+        MouseEffect.style.left = (e.clientX) + 'px'
+        MouseEffect.style.top = (e.clientY) + 'px'
 
         setTimeout(() => {
           MouseEffect.style.opacity = 1
           MouseEffect.style.transition = "all 0.2s"
-          MouseEffect.style.transform = `scale(1) rotate(360deg)`
-        }, 10);
+          MouseEffect.style.transform = `scale(1)`
+        }, 10)
 
         setTimeout(() => {
           MouseEffect.style.opacity = 0
           MouseEffect.style.transform = "scale(0)"
-        }, 200);
+        }, 200)
 
         Mouse.append(MouseEffect)
 
         setTimeout(() => {
           MouseEffect.remove()
-        }, 500);
-      });
-    });
+        }, 500)
+      })
+
+      window.addEventListener("mousedown", function (e) {
+        var MouseEffect = document.createElement('div')
+        MouseEffect.style = `
+          width: 10px;
+          height: 10px;
+          border: 1px solid white;
+          position:fixed;
+          transition:all 0.5s;
+          opacity:0;
+          border-radius:100%;
+          transform:scale(2) rotate(0deg);
+          pointer-events: none;
+          aspect-ratio: 1/1`
+
+        MouseEffect.style.left = (e.clientX) + 'px'
+        MouseEffect.style.top = (e.clientY) + 'px'
+
+        setTimeout(() => {
+          MouseEffect.style.transform = `scale(10)`
+        }, 1);
+
+        setTimeout(() => {
+          MouseEffect.style.opacity = 1
+          MouseEffect.style.transition = "all 0.2s"
+        }, 10)
+
+        setTimeout(() => {
+          MouseEffect.style.opacity = 0
+        }, 200)
+
+        Mouse.append(MouseEffect)
+
+        setTimeout(() => {
+          MouseEffect.remove()
+        }, 500)
+      })
+
+      var MobileStyle = document.createElement('style')
+      document.head.append(MobileStyle)
+
+      function Resize() {
+        if (document.documentElement.clientWidth >= 800) {
+          MobileStyle.textContent = ``
+        } else {
+          MobileStyle.textContent = `
+          .Page{
+            flex-wrap: wrap;
+          }
+          
+          .LeftFrame,
+          .RightFrame{
+            height: 50% !important;
+          }
+          `
+        }
+        console.log(document.documentElement.clientWidth)
+      }
+
+      Resize()
+      window.onresize = Resize
 
 
 
+      function OnScroll() {
+        CheckPage(0)
+        CheckPage(1)
+        CheckPage(2)
+        CheckPage(3)
+        CheckPage(4)
 
+        BG.style.filter = `hue-rotate(${container.scrollLeft / 20}deg)`
+      }
+
+      OnScroll()
+
+      ButtonContainer = document.getElementById("ButtonContainer")
+
+      GetAllButton = ButtonContainer.getElementsByClassName("PageButton")
+
+      Array.from(GetAllButton).forEach(element => {
+        console.log(element)
+        element.onclick = function () {
+          var GetPageNumber = element.id
+          var GetPageNameLen = GetPageNumber.length
+          GetPageNumber = GetPageNumber.substring(GetPageNameLen - 1, GetPageNameLen)
+          GetPageNumber = Number(GetPageNumber)
+          container.scrollTo({
+            top: 0,
+            left: GetPageNumber * window.innerWidth,
+            behavior: "smooth",
+          });
+        }
+      })
+
+    })
 
   </script>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'en' },
+        'google_translate_element'
+      );
+
+      document.getElementsByClassName("skiptranslate")[0].document.getElementsByClassName("span")[0].remove
+    }  
+  </script>
+
+  <script type="text/javascript"
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+
 </head>
 
-<body style="width: 100%; height: 100%; overflow: hidden;" id="mainbody">
+<body
+  style="margin:0px; width: 100%; height: 100%; scroll-snap-type: x mandatory; overflow-x: scroll; overflow-y: hidden; display: flex; flex-direction: row;">
 
-  <!-- loading -->
+  <img id="BG" style="
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    object-fit: cover;" src="https://i.imgur.com/Nglfni6.png">
+  </img>
 
-  <div id="loadscreen" style="background-color: rgb(0, 0, 0);
+  <div id="loadscreen" style="background-color: rgb(0, 0, 0);;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -393,215 +548,196 @@ height: 100%;">
     opacity: 0.5;"></div>
   </div>
 
-  <!-- loading -->
-
-  <div style="background-image: url('img/BG.gif');
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-size: cover;
-    filter: blur(1vmax);"></div>
-
-  <div style="
-    width: 100%;
-    height: 100%;
-    box-shadow: #00daff8a 0px 0px 1000px 10px;
-    overflow: hidden;" class="flex flex-row flex-wrap justify-center items-center">
-    <div id="LeftMain" class="font-black text-8xl flex w-1/2 h-1/2 justify-center items-center flex-col"
-      style="min-width: 400px;">
-      <span class="font2" style="letter-spacing:10px;">Hello!</span>
-      <span class="font2" style="letter-spacing:8px; color:transparent; -webkit-text-stroke: 1px white;">Hello!</span>
-      <span class="font2"
-        style="letter-spacing:6px; color:transparent; -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);">Hello!</span>
-      <span class="font2"
-        style="letter-spacing:4px; color:transparent; -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);">Hello!</span>
-      <span class="font2"
-        style="letter-spacing:2px; color:transparent; -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);">Hello!</span>
-      <span class="font2" style="color:transparent; -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);">Hello!</span>
-    </div>
-
-    <div id="RightMain" class="font-black flex w-1/2 h-1/2 font2 justify-center items-center flex-col" style="min-width: 400px;
-      font-size: 3dvw;">
-      <span span class="font2" style="letter-spacing:3px;">{ My name is }</span>
-      <span span class="font2" style="letter-spacing:3px;">Jakkapat Kaewthong</span>
-      <span span style="letter-spacing:3px; font-weight: 900;">[ จักรภัทร แก้วทอง ]</span>
-      <span class="font2" style="color:transparent; -webkit-text-stroke: 1px white;">{ Skills }</span>
-      <span class="font2" style="color:transparent; -webkit-text-stroke: 1px white;">Coding : Lua : HTML : css : js</span>
-      <span class="font2" style="color:transparent; -webkit-text-stroke: 1px white;">Drawing</span>
-      <span class="font2" style="color:transparent; -webkit-text-stroke: 1px white;">Write song / Remix song</span>
-      <span class="font2" style="color:transparent; -webkit-text-stroke: 1px white;">Modeling 3D</span>
-    </div>
-
-  </div>
-
-
-
-
-
-
-  <img id="BG" style="
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-    object-fit: cover;" src="https://i.imgur.com/Nglfni6.png"></img>
-
-
-
-
-
   <div id="Mouse" style="
     position: fixed;
     z-index: 101;
     top: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;"></div>
-
-
-
-  <div style="height: 100px;"></div>
-
-  <div class="flex text-4xl font2 w-full border-b border-dashed" style="border-color: gold; letter-spacing:10px; padding-inline: 5%;">
-    social media
+    pointer-events: none;">
   </div>
 
 
-  <div class="flex flex-row mt-5 justify-center flex-wrap" style="width: 100%;">
-    <a href="https://www.youtube.com/channel/UCJ2C0UTfxQo6iGTfudPfoRQ" target="_blank"
-      class="font-extralight text-lg p-2 rounded-full flex flex-row justify-center items-center socialbutton"
-      style="height: 70px; box-shadow: red 0px 0px 6px;">
-      <img class="rounded-full mr-2"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png">
-      Yoututbe : AzPepoze
-    </a>
+  <div id="Page0" class="Page">
 
-    <a href="https://www.facebook.com/profile.php?id=100009337348196" target="_blank"
-      class="font-extralight text-lg p-2 rounded-full flex flex-row justify-center items-center socialbutton"
-      style="height: 70px; box-shadow: rgb(0, 132, 255) 0px 0px 6px;">
-      <img class="rounded-full mr-2"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png">
-      Facebook : จักรภัทร แก้วทอง (AzPepoze)
-    </a>
+    <div class="LeftFrame">
 
-    <a href="https://www.pixiv.net/en/users/44970537" target="_blank"
-      class="font-extralight text-lg p-2 rounded-full flex flex-row justify-center items-center socialbutton"
-      style="height: 70px; box-shadow: rgb(0, 132, 255) 0px 0px 6px;">
-      <img class="rounded-full mr-2"
-        src="https://is5-ssl.mzstatic.com/image/thumb/Purple116/v4/65/cc/d2/65ccd259-6ed6-4e34-20f0-d83018f6663a/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg">
-      Pixiv : AzPepoze
-    </a>
+      <div class="MainText StrokeText">Hello!</div>
+      <div class="SubText">First of all, Please choose your language.</div>
 
-    <a href="https://www.tiktok.com/@azpepoze_1" target="_blank"
-      class="font-extralight text-lg p-2 rounded-full flex flex-row justify-center items-center socialbutton"
-      style="height: 70px; box-shadow: rgb(186, 84, 255) 0px 0px 6px;">
-      <img class="rounded-full mr-2" src="https://img.freepik.com/premium-vector/tik-tok-logo_578229-290.jpg">
-      Tiktok : azpepoze_1
-    </a>
-  </div>
-
-
-
-
-  <div style="height: 100px;"></div>
-
-  <div class="flex text-4xl font2 w-full border-b border-dashed" style="border-color: gold; letter-spacing:10px; padding-inline: 5%;">
-    Created Community
-  </div>
-
-  <div class="flex flex-row mt-5 justify-center flex-wrap" style="width: 100%;">
-    <a href="https://discord.gg/eHuhzKbr7C" target="_blank"
-      class="font-extralight text-lg p-2 rounded-full flex flex-row justify-center items-center socialbutton"
-      style="height: 70px; box-shadow: rgb(106, 171, 255) 0px 0px 6px;">
-      <img class="rounded-full mr-2"
-        src="https://cdn.discordapp.com/icons/1094267529322578040/53eec9675547b623d0ac7e356b60cfdc.webp?size=96">
-      Discord : Perthro
-    </a>
-
-    <a href="https://discord.gg/BgxvVqap4G" target="_blank"
-      class="font-extralight text-lg p-2 rounded-full flex flex-row justify-center items-center socialbutton"
-      style="height: 70px; box-shadow: rgb(255, 255, 255) 0px 0px 6px;">
-      <img class="rounded-full mr-2"
-        src="https://cdn.discordapp.com/icons/999312366518939728/d4413c38bdbd1fc6808e6ad631fed53a.webp?size=96">
-      Discord : Newtube
-    </a>
-  </div>
-
-
-
-
-
-
-
-  <div style="height: 100px;"></div>
-
-  <div class="flex text-4xl font2 w-full border-b border-dashed" style="border-color: gold; letter-spacing:10px; padding-inline: 5%;">
-    Work Projects
-  </div>
-
-  <div class="flex flex-row mt-5 justify-center flex-wrap" style="width: 100%; grid-gap: 50px;">
-
-
-    <div class="work">
-      <div class="title">Perthro</div>
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?si=tuTqFvJaufMJfvyV&amp;list=PLr6Nl-A8PXhxhHBmEeVc64ns1Cpi8ygYc"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
-      style="box-shadow: green 0px 0px 50px;"></iframe>
-      <div class="WorkDes">Perthro is a roblox game
-        <br>Genre : Open World RPG
-        <br>Developer : Me
-        <br>Status : In developing, Not public
-      </div>
-      <button class="seemore"><span>Expand</span></button>
     </div>
 
-    <div class="work">
-      <div class="title">Newtube</div>
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/Z3Hrpjsi9AY?rel=0&wmode=opaque&enablejsapi=1"
-        title="Youtube style customizer (Newtube) (Preview)" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen style="box-shadow: rgb(255, 255, 255) 0px 0px 50px;"></iframe>
-      <div class="WorkDes">Newtube is browser extention
-        <br>Available :  <a href="https://chrome.google.com/webstore/detail/dnjjchajjdnfbjhjclmilicgheglcopj" target="_blank">Chrome Web Store</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/newtube-youtubestylecustomizer/" target="_blank">Firefox</a>
-        <br>Developer : Me
-        <br>Status : Public
+    <div class="RightFrame">
+
+      <div id="google_translate_element" style="display: table;
+      align-items: center;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: -webkit-center;
+      width: 40%;">
       </div>
-      <button class="seemore"><span>Expand</span></button>
+
+      <div class="SubText CenterText"><br>You can scroll (Mouse), swipe (Touch screen)<br>and select page at bottom to
+        change page.</div>
+
     </div>
 
+  </div>
+
+  <div id="Page1" class="Page">
+
+    <div class="LeftFrame">
+
+      <div class="SubText CenterText MediumText"><span bold Large class="StrokeText">My name is</span><br><br>Jakkapat
+        Kaewthong<br>[ จักรภัทร
+        แก้วทอง ]</div>
+
+    </div>
+
+    <div class="RightFrame">
+
+      <div class="SubText CenterText MediumText StrokeText" bold Large>❇️ My skills ❇️
+      </div>
+
+      <div class="SubText CenterText MediumText" style="text-align: start;">
+        <br>
+        • 🧑‍💻 Coding : Lua : HTML : css : js
+        <br>• 🎨 Drawing
+        <br>• 🎶 Write song / Remix song
+        <br>• 🚗 Modeling 3D
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="Page2" class="Page">
+
+    <div class="LeftFrame">
+
+      <div class="SubText CenterText" Large bold>🌐 My social media 🌐</div>
+
+    </div>
+
+    <div class="RightFrame">
+
+      <a href="https://www.youtube.com/channel/UCJ2C0UTfxQo6iGTfudPfoRQ" target="_blank" class="socialbutton"
+        style="height: 70px; box-shadow: red 0px 0px 6px;">
+        <img class="rounded-full mr-2"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png">
+        Yoututbe : AzPepoze
+      </a>
+
+      <a href="https://www.facebook.com/profile.php?id=100009337348196" target="_blank" class="socialbutton"
+        style="height: 70px; box-shadow: rgb(0, 132, 255) 0px 0px 6px;">
+        <img class="rounded-full mr-2"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png">
+        Facebook : จักรภัทร แก้วทอง (AzPepoze)
+      </a>
+
+      <a href="https://www.pixiv.net/en/users/44970537" target="_blank" class="socialbutton"
+        style="height: 70px; box-shadow: rgb(0, 132, 255) 0px 0px 6px;">
+        <img class="rounded-full mr-2"
+          src="https://is5-ssl.mzstatic.com/image/thumb/Purple116/v4/65/cc/d2/65ccd259-6ed6-4e34-20f0-d83018f6663a/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg">
+        Pixiv : AzPepoze
+      </a>
+
+      <a href="https://www.tiktok.com/@azpepoze_1" target="_blank" class="socialbutton"
+        style="height: 70px; box-shadow: rgb(186, 84, 255) 0px 0px 6px;">
+        <img class="rounded-full mr-2" src="https://img.freepik.com/premium-vector/tik-tok-logo_578229-290.jpg">
+        Tiktok : azpepoze_1
+      </a>
+
+    </div>
+
+  </div>
+
+  <div id="Page3" class="Page">
+
+    <div class="LeftFrame">
+
+      <div class="work" style="border-color: green;">
+        <div class="title">Perthro</div>
+
+        <iframe
+          src="https://www.youtube.com/embed/videoseries?si=tuTqFvJaufMJfvyV&amp;list=PLr6Nl-A8PXhxhHBmEeVc64ns1Cpi8ygYc&autoplay=1&loop=1&mute=1"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <div class="WorkDes">Perthro is a roblox game
+          <br>Genre : Open World RPG
+          <br>Developer : Me
+          <br>Status : In developing, Not public
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+    <div class="RightFrame">
+
+      <div class="work" style="border-color: white;">
+        <div class="title">Newtube</div>
+
+        <iframe
+          src="https://www.youtube.com/embed/Z3Hrpjsi9AY?rel=0&wmode=opaque&enablejsapi=1&autoplay=1&loop=1&mute=1"
+          title="Youtube style customizer (Newtube) (Preview)" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <div class="WorkDes">Newtube is browser extention
+          <br>Available : <a href="https://chrome.google.com/webstore/detail/dnjjchajjdnfbjhjclmilicgheglcopj"
+            target="_blank">Chrome Web Store</a>, <a
+            href="https://addons.mozilla.org/en-US/firefox/addon/newtube-youtubestylecustomizer/"
+            target="_blank">Firefox</a>
+          <br>Developer : Me
+          <br>Status : Public
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="Page4" class="Page">
+
+    <div class="LeftFrame">
+
+      <div>Hello!</div>
+
+    </div>
+
+    <div class="RightFrame">
+
+    </div>
 
   </div>
 
 
+  <div id="ButtonContainer"
+    style="bottom: 0px; width: 100%; height: 5%; position: fixed; display: flex; flex-direction: row; justify-content: space-between;">
+    <div id="PageButton0" class="PageButton">
+      Home Page
+    </div>
 
+    <div id="PageButton1" class="PageButton">
+      About me
+    </div>
 
+    <div id="PageButton2" class="PageButton">
+      Social media
+    </div>
 
-  <div style="height: 100px;"></div>
+    <div id="PageButton3" class="PageButton">
+      Work Projects
+    </div>
 
-  <div class="flex text-4xl font2 w-full border-b border-dashed" style="border-color: gold; letter-spacing:10px; padding-inline: 5%;">
-    Songs (Original / Remix)</div>
-
-  <div class="flex flex-row mt-5 justify-center flex-wrap" style="width: 100%;">
-    <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/videoseries?list=PLr6Nl-A8PXhxYjSzJSAh20CJPxhuSua4o"
-      title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen style="max-width: 50%; min-width: 300px;"></iframe>
+    <div id="PageButton4" class="PageButton">
+      Songs (Original / Remix)
+    </div>
   </div>
-
-
-
-
-
-
-
-
-  <div style="height: 100px;"></div>
 
 </body>
 
