@@ -50,6 +50,16 @@ height: 100%;">
       top: 0px !important;
     }
 
+    @keyframes Typing {
+      from {
+        border-color: transparent;
+      }
+
+      to {
+        border-color: white;
+      }
+    }
+
 
 
 
@@ -197,7 +207,7 @@ height: 100%;">
 
     .WorkDes a {
       color: aqua;
-      transition: all 0.5s;
+      transition: all 0.2s;
       text-decoration: none;
       font-weight: 900;
     }
@@ -228,11 +238,69 @@ height: 100%;">
       position: relative;
     }
 
-    .Page > * > * {
+
+
+
+
+
+
+
+
+    #Page2 a:nth-child(1) {
+      transition: margin-left 0.2s, opacity 0.2s;
+    }
+
+    #Page2 a:nth-child(2) {
+      transition: margin-left 0.5s, opacity 0.5s;
+    }
+
+    #Page2 a:nth-child(3) {
+      transition: margin-left 0.7s, opacity 0.7s;
+    }
+
+    #Page2 a:nth-child(4) {
+      transition: margin-left 0.9s, opacity 0.9s;
+    }
+
+    #Page2[hidden] a {
+      margin-left: 100%;
+    }
+
+
+
+
+
+    #Page4 .Collum3:nth-child(1) {
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    #Page4 .Collum3:nth-child(2) {
+      transition: transform 0.6s, opacity 0.6s;
+    }
+    
+    #Page4 .Collum3:nth-child(3) {
+      transition: transform 1s, opacity 1s;
+    }
+
+    #Page4[hidden] .Collum3{
+      transform: scale(0.5);
+    }
+
+    #Page4 .Collum3{
+      transform: scale(1);
+    }
+
+
+
+
+
+
+
+    .Page>*>* {
       transition: all 1s;
     }
 
-    .Page[hidden] > * > * {
+    .Page[hidden]>*>* {
       opacity: 0;
     }
 
@@ -266,14 +334,32 @@ height: 100%;">
     }
 
     .LeftFrame,
-    .RightFrame {
-      min-width: 50%;
+    .RightFrame,
+    .Collum3 {
       width: 100%;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+    }
+
+    .LeftFrame,
+    .RightFrame {
+      min-width: 50%;
+    }
+
+    .Collum3 {
+      min-width: 33.33%;
+    }
+
+    .Collum3 iframe {
+      border-radius: 50px;
+      aspect-ratio: 16/9;
+      width: -webkit-fill-available;
+      width: -moz-available;
+      height: auto;
+      padding: 2%;
     }
 
     .MainText {
@@ -478,7 +564,34 @@ height: 100%;">
             padding-block: 0px !important;
             margin-bottom: 10%;
           }
-          `
+
+          .Collum3{
+            height: 33.33%;
+          }
+
+          #Page4 {
+            padding-block: 0px !important;
+            margin-bottom: 10%;
+          }
+
+          #Page4 iframe{
+            width: auto !important;;
+            max-width: -webkit-fill-available !important;
+            max-width: -moz-available !important;
+            height: -webkit-fill-available !important;
+            height: -moz-available !important;
+          }
+
+          #Page4 .Collum3{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-inline: 5%;
+          }
+
+          #Page4 *{
+            margin: 0px !important;
+          }`
         }
       }
 
@@ -500,6 +613,10 @@ height: 100%;">
       OnScroll()
 
       ButtonContainer = document.getElementById("ButtonContainer")
+
+      setTimeout(() => {
+        ButtonContainer.style.bottom = "0px"
+      }, 500);
 
       GetAllButton = ButtonContainer.getElementsByClassName("PageButton")
 
@@ -747,26 +864,41 @@ height: 100%;">
 
   <div id="Page4" class="Page">
 
-    <div class="LeftFrame">
-
-      <div>Hello!</div>
-
+    <div class="Collum3">
+      <div class="MediumText" bold>Original [Playlist]</div>
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PLr6Nl-A8PXhzm5TACMb7g-bGHn4R4kVwp"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen style="margin-bottom: 40%;"></iframe>
     </div>
 
-    <div class="RightFrame">
+    <div class="Collum3">
+      <div class="MediumText" bold>Remix [Playlist]</div>
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PLr6Nl-A8PXhwjiXddfsmlHgCX4bpNxvLq"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
 
+    <div class="Collum3">
+      <div class="MediumText" bold style="margin-top: 40%;">Piano Cover [Playlist]</div>
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PLr6Nl-A8PXhyoGniP2Az6VgHkaVkJdd1g"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
     </div>
 
   </div>
 
 
-  <div id="ButtonContainer" style="bottom: 0px;
+  <div id="ButtonContainer" style="bottom: -8%;
     width: 100%;
     height: 8%;
     position: fixed;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;">
+    justify-content: space-between;
+    transition: bottom 2s;">
     <div id="PageButton0" class="PageButton">
       Home Page
     </div>
