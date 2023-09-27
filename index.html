@@ -51,13 +51,18 @@ height: 100%;">
     }
 
     @keyframes Typing {
-      from {
+      0% {
         border-color: transparent;
       }
 
-      to {
+      50% {
         border-color: white;
       }
+
+      100% {
+        border-color: transparent;
+      }
+
     }
 
 
@@ -247,19 +252,19 @@ height: 100%;">
 
 
     #Page2 a:nth-child(1) {
-      transition: margin-left 0.2s, opacity 0.2s;
+      transition: margin-left 0.2s, opacity 0.2s, transform 0.2s, color 0.2s, background 0.2s;
     }
 
     #Page2 a:nth-child(2) {
-      transition: margin-left 0.5s, opacity 0.5s;
+      transition: margin-left 0.5s, opacity 0.5s, transform 0.2s, color 0.2s, background 0.2s;
     }
 
     #Page2 a:nth-child(3) {
-      transition: margin-left 0.7s, opacity 0.7s;
+      transition: margin-left 0.7s, opacity 0.7s, transform 0.2s, color 0.2s, background 0.2s;
     }
 
     #Page2 a:nth-child(4) {
-      transition: margin-left 0.9s, opacity 0.9s;
+      transition: margin-left 0.9s, opacity 0.9s, transform 0.2s, color 0.2s, background 0.2s;
     }
 
     #Page2[hidden] a {
@@ -277,16 +282,16 @@ height: 100%;">
     #Page4 .Collum3:nth-child(2) {
       transition: transform 0.6s, opacity 0.6s;
     }
-    
+
     #Page4 .Collum3:nth-child(3) {
       transition: transform 1s, opacity 1s;
     }
 
-    #Page4[hidden] .Collum3{
+    #Page4[hidden] .Collum3 {
       transform: scale(0.5);
     }
 
-    #Page4 .Collum3{
+    #Page4 .Collum3 {
       transform: scale(1);
     }
 
@@ -402,6 +407,22 @@ height: 100%;">
       height: -webkit-fill-available;
       width: 100%;
       display: contents;
+    }
+
+
+    #Page1 img {
+      height: 80px;
+      padding: 10px;
+      filter: drop-shadow(1px 1px 40px cyan);
+    }
+
+    [coding] {
+      display: flex;
+      width: min-content;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2%;
     }
   </style>
 
@@ -715,7 +736,7 @@ height: 100%;">
 
     <div class="LeftFrame">
 
-      <div class="MainText StrokeText">Hello!</div>
+      <div class="MainText StrokeText" style="animation: Typing 0.5s infinite; border-right: 5px solid;">Hello!</div>
       <div class="SubText">First of all, Please choose your language.</div>
 
     </div>
@@ -754,10 +775,15 @@ height: 100%;">
 
       <div class="SubText CenterText MediumText" style="text-align: start;">
         <br>
-        • 🧑‍💻 Coding : Lua : HTML : css : js
-        <br>• 🎨 Drawing
+
+        <span style="display: flex; flex-direction: row; align-items: center;">• 🧑‍💻 Coding
+          <span coding><img src="img/Lua-Logo.svg"><span>Lua</span></span> :
+          <span coding><img src="img/HTMLCSSJS.png"><span>HTML,CSS,JS</span></span>
+        </span>
+        • 🎨 Drawing
         <br>• 🎶 Write song / Remix song
         <br>• 🚗 Modeling 3D
+
       </div>
 
     </div>
@@ -865,7 +891,7 @@ height: 100%;">
   <div id="Page4" class="Page">
 
     <div class="Collum3">
-      <div class="MediumText" bold>Original [Playlist]</div>
+      <div class="MediumText">Original [Playlist]</div>
       <iframe src="https://www.youtube.com/embed/videoseries?list=PLr6Nl-A8PXhzm5TACMb7g-bGHn4R4kVwp"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -873,7 +899,7 @@ height: 100%;">
     </div>
 
     <div class="Collum3">
-      <div class="MediumText" bold>Remix [Playlist]</div>
+      <div class="MediumText">Remix [Playlist]</div>
       <iframe src="https://www.youtube.com/embed/videoseries?list=PLr6Nl-A8PXhwjiXddfsmlHgCX4bpNxvLq"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -881,7 +907,7 @@ height: 100%;">
     </div>
 
     <div class="Collum3">
-      <div class="MediumText" bold style="margin-top: 40%;">Piano Cover [Playlist]</div>
+      <div class="MediumText" style="margin-top: 40%;">Piano Cover [Playlist]</div>
       <iframe src="https://www.youtube.com/embed/videoseries?list=PLr6Nl-A8PXhyoGniP2Az6VgHkaVkJdd1g"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
