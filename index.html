@@ -251,23 +251,23 @@ height: 100%;">
 
 
 
-    #Page2 a:nth-child(1) {
+    #Page1 a:nth-child(1) {
       transition: margin-left 0.2s, opacity 0.2s, transform 0.2s, color 0.2s, background 0.2s;
     }
 
-    #Page2 a:nth-child(2) {
+    #Page1 a:nth-child(2) {
       transition: margin-left 0.5s, opacity 0.5s, transform 0.2s, color 0.2s, background 0.2s;
     }
 
-    #Page2 a:nth-child(3) {
+    #Page1 a:nth-child(3) {
       transition: margin-left 0.7s, opacity 0.7s, transform 0.2s, color 0.2s, background 0.2s;
     }
 
-    #Page2 a:nth-child(4) {
+    #Page1 a:nth-child(4) {
       transition: margin-left 0.9s, opacity 0.9s, transform 0.2s, color 0.2s, background 0.2s;
     }
 
-    #Page2[hidden] a {
+    #Page1[hidden] a {
       margin-left: 100%;
     }
 
@@ -275,23 +275,23 @@ height: 100%;">
 
 
 
-    #Page4 .Collum3:nth-child(1) {
+    #Page3 .Collum3:nth-child(1) {
       transition: transform 0.2s, opacity 0.2s;
     }
 
-    #Page4 .Collum3:nth-child(2) {
+    #Page3 .Collum3:nth-child(2) {
       transition: transform 0.6s, opacity 0.6s;
     }
 
-    #Page4 .Collum3:nth-child(3) {
+    #Page3 .Collum3:nth-child(3) {
       transition: transform 1s, opacity 1s;
     }
 
-    #Page4[hidden] .Collum3 {
+    #Page3[hidden] .Collum3 {
       transform: scale(0.5);
     }
 
-    #Page4 .Collum3 {
+    #Page3 .Collum3 {
       transform: scale(1);
     }
 
@@ -309,7 +309,7 @@ height: 100%;">
       opacity: 0;
     }
 
-    #Page3 {
+    #Page2 {
       padding-block: 5%;
     }
 
@@ -581,7 +581,7 @@ height: 100%;">
             height: 50% !important;
           }
 
-          #Page3 {
+          #Page2 {
             padding-block: 0px !important;
             margin-bottom: 10%;
           }
@@ -590,12 +590,12 @@ height: 100%;">
             height: 33.33%;
           }
 
-          #Page4 {
+          #Page3 {
             padding-block: 0px !important;
             margin-bottom: 10%;
           }
 
-          #Page4 iframe{
+          #Page3 iframe{
             width: auto !important;;
             max-width: -webkit-fill-available !important;
             max-width: -moz-available !important;
@@ -603,14 +603,14 @@ height: 100%;">
             height: -moz-available !important;
           }
 
-          #Page4 .Collum3{
+          #Page3 .Collum3{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             padding-inline: 5%;
           }
 
-          #Page4 *{
+          #Page3 *{
             margin: 0px !important;
           }`
         }
@@ -626,7 +626,6 @@ height: 100%;">
         CheckPage(1)
         CheckPage(2)
         CheckPage(3)
-        CheckPage(4)
 
         BG.style.filter = `hue-rotate(${container.scrollLeft / 20}deg)`
       }
@@ -667,7 +666,7 @@ height: 100%;">
         'google_translate_element'
       );
 
-      document.getElementsByClassName("skiptranslate")[0].document.getElementsByClassName("span")[0].remove
+      document.getElementsByClassName("skiptranslate")[0].document.getElementsByClassName("span")[0].remove()
     }  
   </script>
 
@@ -762,38 +761,6 @@ height: 100%;">
 
     <div class="LeftFrame">
 
-      <div class="SubText CenterText MediumText"><span bold Large class="StrokeText">My name is</span><br><br>Jakkapat
-        Kaewthong<br>[ จักรภัทร
-        แก้วทอง ]</div>
-
-    </div>
-
-    <div class="RightFrame">
-
-      <div class="SubText CenterText MediumText StrokeText" bold Large>❇️ My skills ❇️
-      </div>
-
-      <div class="SubText CenterText MediumText" style="text-align: start;">
-        <br>
-
-        <span style="display: flex; flex-direction: row; align-items: center;">• 🧑‍💻 Coding
-          <span coding><img src="img/Lua-Logo.svg"><span>Lua</span></span> :
-          <span coding><img src="img/HTMLCSSJS.png"><span>HTML,CSS,JS</span></span>
-        </span>
-        • 🎨 Drawing
-        <br>• 🎶 Write song / Remix song
-        <br>• 🚗 Modeling 3D
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <div id="Page2" class="Page">
-
-    <div class="LeftFrame">
-
       <div class="SubText CenterText" Large bold>🌐 My social media 🌐</div>
 
     </div>
@@ -805,13 +772,6 @@ height: 100%;">
         <img class="rounded-full mr-2"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png">
         Yoututbe : AzPepoze
-      </a>
-
-      <a href="https://www.facebook.com/profile.php?id=100009337348196" target="_blank" class="socialbutton"
-        style="height: 70px; box-shadow: rgb(0, 132, 255) 0px 0px 6px;">
-        <img class="rounded-full mr-2"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png">
-        Facebook : จักรภัทร แก้วทอง (AzPepoze)
       </a>
 
       <a href="https://www.pixiv.net/en/users/44970537" target="_blank" class="socialbutton"
@@ -831,7 +791,7 @@ height: 100%;">
 
   </div>
 
-  <div id="Page3" class="Page">
+  <div id="Page2" class="Page">
 
     <div class="LeftFrame">
 
@@ -888,7 +848,7 @@ height: 100%;">
 
   </div>
 
-  <div id="Page4" class="Page">
+  <div id="Page3" class="Page">
 
     <div class="Collum3">
       <div class="MediumText">Original [Playlist]</div>
@@ -930,18 +890,14 @@ height: 100%;">
     </div>
 
     <div id="PageButton1" class="PageButton">
-      About me
-    </div>
-
-    <div id="PageButton2" class="PageButton">
       Social media
     </div>
 
-    <div id="PageButton3" class="PageButton">
+    <div id="PageButton2" class="PageButton">
       Work Projects
     </div>
 
-    <div id="PageButton4" class="PageButton">
+    <div id="PageButton3" class="PageButton">
       Songs<br>(Original / Remix)
     </div>
   </div>
