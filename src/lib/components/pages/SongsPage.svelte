@@ -52,9 +52,12 @@
 		}
 	}
 
-	  @media (min-width: 769px) {
-    /* Removed large percentage margins */
-  }
-</style>
-
+	@media (min-width: 769px) {
+		.Collum3:nth-child(1) iframe {
+			margin-bottom: 40%;
+		}
+		.Collum3:nth-child(3) .MediumText {
+			margin-top: 40%;
+		}
+	}
 </style>
