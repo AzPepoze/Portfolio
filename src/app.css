@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+
+@keyframes LoadingHue {
+	from {
+		filter: hue-rotate(0deg);
+	}
+
+	to {
+		filter: hue-rotate(360deg);
+	}
+}
+
+@keyframes Loading {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes SlideWave {
+	from {
+		background-position-x: 0px;
+	}
+
+	to {
+		background-position-x: 1000px;
+	}
+}
+
+.wave {
+	background-image: url(img/wave.png);
+	background-size: 1000px 100%;
+}
+
+@keyframes Typing {
+	0% {
+		border-color: transparent;
+	}
+
+	50% {
+		border-color: white;
+	}
+
+	100% {
+		border-color: transparent;
+	}
+}
+
+.goog-te-combo {
+	border-radius: 10px;
+	background: black;
+	border: solid 1px;
+}
+
+#google_translate_element,
+#google_translate_element * {
+	font-size: 2vmax;
+	color: white;
+	font-weight: 100;
+	font-family: "Nunito", "Noto Sans Thai";
+}
+
+#google_translate_element select {
+	margin-bottom: 10%;
+}
+
+html.translated-ltr #TopText {
+	top: 40px !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+	border-color: rgb(80, 80, 80);
+}
+
+iframe.skiptranslate {
+	display: none;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #7ad5ff;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #c4f6ff;
+}
+
+* {
+	color: white;
+}
+
+*::selection {
+	color: black;
+	background-color: white;
+}
+
+html,
+body,
+:global(body > div) {
+	height: 100%;
+}
+
+html {
+	background-color: rgb(18 18 18);
+}
+
+body {
+	margin: 0px;
+	overflow-y: hidden; /* Hide vertical scrollbar on body */
+	font-family: "Noto Sans Thai", sans-serif;
+}
+
+.MainText {
+  font-size: 9vmax;
+  font-weight: 900;
+}
+
+.SubText {
+  font-size: 2vmax;
+}
+
+.StrokeText {
+  font-family: sans-serif;
+  letter-spacing: 10px;
+  color: transparent !important;
+  -webkit-text-stroke: 2px rgb(255, 255, 255);
+}
+
+.CenterText {
+  text-align: center;
+}
+
+.Large {
+  font-size: 4vmax;
+}
+
+.MediumText {
+  font-size: 3vmax;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+/* Layout Styles */
+.Page {
+  display: flex;
+  min-height: calc(100vh - 8vh); /* Account for 8% height of bottom nav */
+  width: 100%;
+  overflow-y: auto;
+  padding-bottom: 8vh;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.LeftFrame,
+.RightFrame {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust minmax as needed */
+  gap: 20px; /* Adjust gap as needed */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .RightFrame {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Collum3 */
+.Collum3 {
+  width: 33.33%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .LeftFrame,
+  .RightFrame,
+  .Collum3 {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Project Page Styles */
+
+/* Project Page Styles */
+.work {
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.work .title {
+  font-size: 2.5vmax;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.WorkContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.WorkContainer iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.WorkDes {
+  font-size: 1.5vmax;
+  text-align: left;
+  width: 100%;
+}
+
+/* Socials Page Styles */
+
+/* Home Page Specific Styles */
+.typing-animation {
+  animation: Typing 0.5s infinite;
+  border-right: 5px solid;
+}
+
+.google-translate-container {
+  display: table;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: -webkit-center;
+  width: 40%;
+}
+
+/* Project Page Specific Styles */
+.border-green {
+  border-color: green;
+}
+
+.border-white {
+  border-color: white;
+}
+
+/* Socials Page Specific Styles */
+.box-shadow-red {
+  box-shadow: red 0px 0px 6px;
+}
+
+.box-shadow-blue {
+  box-shadow: rgb(0, 132, 255) 0px 0px 6px;
+}
+
+.box-shadow-purple {
+  box-shadow: rgb(186, 84, 255) 0px 0px 6px;
+}
+
+/* Songs Page Specific Styles */
+.margin-bottom-40 {
+  margin-bottom: 40%;
+}
+
+.margin-top-40 {
+  margin-top: 40%;
+}
